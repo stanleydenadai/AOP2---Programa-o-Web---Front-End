@@ -1,0 +1,238 @@
+/* Corpo da Página */
+body {
+    font-family: 'Poppins', sans-serif;  /* Fonte moderna e clean */
+    margin: 0;
+    padding: 0;
+    background-color: #121212;  /* Fundo escuro para destacar imagens e conteúdo */
+    color: #fff;  /* Texto em branco para contraste */
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    color: #FF6347;  /* Cor vibrante para o título */
+    margin-top: 30px;
+    letter-spacing: 2px;
+}
+
+/* Menu de Navegação */
+nav {
+    background-color: #333;  /* Fundo escuro */
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6347;  /* Cor vibrante ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Destaques (Imagem e Texto) */
+.destaques {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.destaque-item {
+    width: 30%;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.destaque-item a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.destaque-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.7);  /* Diminui o brilho da imagem para deixar o texto mais visível */
+}
+
+.destaque-item a:hover img {
+    transform: scale(1.05);  /* Efeito de zoom na imagem */
+    filter: brightness(1);  /* Aumenta o brilho ao passar o mouse */
+}
+
+/* Texto sobre a imagem */
+.destaque-item p {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .destaques {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .destaque-item {
+        width: 80%;  /* Ocupa mais espaço em dispositivos móveis */
+    }
+}
+
+/* Botões de Ação */
+button {
+    background-color: #FF6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4500;
+    transform: scale(1.1);
+}
+
+/* Fundo com gradiente */
+section.fundo-gradient {
+    background: linear-gradient(45deg, #FF6347, #6a1b9a);
+    padding: 80px 0;
+    text-align: center;
+    color: white;
+}
+
+.fundo-gradient h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Estilos de Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Estilo do Formulário de Contato */
+.formulario-contato {
+    max-width: 600px;  /* Limita a largura do formulário */
+    margin: 50px auto;  /* Centraliza o formulário */
+    padding: 20px;
+    background-color: #121212;  /* Fundo escuro para manter o tema */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-contato h3 {
+    color: #FF6347;  /* Título em cor vibrante */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formulario-contato .campo {
+    width: 100%;  /* Garante que os campos ocupem 100% da largura do formulário */
+    margin-bottom: 20px;
+}
+
+.formulario-contato label {
+    display: block;
+    font-size: 1.1rem;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;  /* Garante que os campos de input e textarea ocupem 100% da largura */
+    padding: 12px;
+    border: 1px solid #FF6347;  /* Borda vibrante */
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #fff;  /* Cor do texto */
+    background-color: #121212;  /* Fundo escuro */
+    transition: border-color 0.3s ease;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+    border-color: #FF4500;  /* Cor ao focar no campo */
+    outline: none;
+}
+
+.formulario-contato textarea {
+    height: 150px;  /* Ajusta a altura do campo de texto */
+    resize: vertical;
+}
+
+.formulario-contato button {
+    width: 100%;  /* Botão ocupa toda a largura disponível */
+    padding: 15px;
+    background-color: #FF6347;  /* Cor vibrante do botão */
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contato button:hover {
+    background-color: #FF4500;  /* Cor ao passar o mouse */
+    transform: scale(1.05);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .formulario-contato {
+        padding: 15px;
+    }
+
+    .formulario-contato h3 {
+        font-size: 1.8rem;
+    }
+}
